@@ -1,0 +1,18 @@
+h1 Listing transactions
+
+table
+  tr
+    th Date
+    th Client
+    th Client Phone
+    th Delivery Address
+    th Product
+
+  - @transactions.each do |transaction|
+    tr
+      td= transaction.date
+      td= transaction.client
+      td= transaction.client_phone
+      td= transaction.delivery_address
+      td= transaction.product
+      td= link_to('Show', transaction_path(transaction))
