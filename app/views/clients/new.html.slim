@@ -1,0 +1,13 @@
+h1 Add new client
+= form_for :client, url: clients_path do |f|
+  p
+    => f.label :name
+    = f.text_field :name
+  p
+    => f.label :phone
+    = f.text_field :phone
+  p
+    = f.submit
+
+.row.justify-content-center
+  = link_to 'All clients', clients_path, class: 'btn btn-primary', role: 'button'

@@ -1,0 +1,17 @@
+h1 Listing clients
+
+table.table
+  thead
+    tr
+      th Name
+      th Phone
+      th Action
+  tbody
+    - @clients.each do |client|
+      tr
+        td= client.name
+        td= client.phone
+        td= link_to('Show', client_path(client))
+
+.row.justify-content-center
+  = link_to 'Add new client', new_client_path, class: 'btn btn-primary', role: 'button'
