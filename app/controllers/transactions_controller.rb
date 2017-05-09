@@ -10,6 +10,7 @@ class TransactionsController < ApplicationController
   def new; end
 
   def create
+    puts transaction_params
     @transaction = Transaction.new(transaction_params)
     @transaction.save
     redirect_to @transaction
