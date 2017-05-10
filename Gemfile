@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'cocoon'
+gem 'simple_form'
 gem 'slim-rails'
 
 # Use Capistrano for deployment

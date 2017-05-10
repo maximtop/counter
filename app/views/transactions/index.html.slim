@@ -15,8 +15,8 @@ table.table
       tr
         td= transaction.id
         td= transaction.date
-        td= transaction.client
-        td= transaction.client_phone
+        td= transaction.client.name
+        td= transaction.client.phone
         td= transaction.delivery_address
         td= transaction.product
         td= link_to('Show', transaction_path(transaction))

@@ -1,13 +1,15 @@
 class TransactionsController < ApplicationController
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.all.includes(:client)
   end
 
   def show
     @transaction = Transaction.find(params[:id])
   end
 
-  def new; end
+  def new
+    @transaction = Transaction.new
+  end
 
   def create
     puts transaction_params
@@ -21,9 +23,7 @@ class TransactionsController < ApplicationController
   def transaction_params
     params.require(:transaction)
           .permit(:date,
-                  :client,
-                  :client_phone,
                   :delivery_address,
-                  :product)
+                  :product, client_attributes: [:id, :name, :phone])
   end
 end

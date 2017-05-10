@@ -1,0 +1,23 @@
+= simple_form_for @transaction do |f|
+  /TODO: use nice data picker
+  p
+    = f.label :date
+    br
+    = f.date_select :date
+  /TODO create possibility to add clients and choose few clients for one transaction
+  /TODO: search from other addresses and show price to near address
+  #client
+    #client_from_list
+      = f.association :client, collection: Client.order(:name), prompt: 'Choose existing client'
+      = link_to_add_association 'Add new Client', f, :client
+  p
+    => f.label :delivery_address
+    = f.text_field :delivery_address
+  p
+    => f.label :product
+    = f.text_field :product
+  p
+    = f.submit
+
+/.row.justify-content-center
+/  = link_to 'All Transactions', transactions_path, class: 'btn btn-primary', role: 'button'

@@ -3,10 +3,10 @@ p
   = @transaction.date
 p
   strong' Phone:
-  = @transaction.client_phone
+  = @transaction.client.phone
 p
   strong' Client:
-  = @transaction.client
+  = @transaction.client.name
 p
   strong' Delivery address:
   = @transaction.delivery_address
