@@ -9,7 +9,7 @@
   #client
     #client_from_list
       = f.association :client, collection: Client.order(:name), prompt: 'Choose existing client'
-      = link_to_add_association 'Add new Client', f, :client
+    = link_to_add_association 'Add new Client', f, :client
   p
     => f.label :delivery_address
     = f.text_field :delivery_address

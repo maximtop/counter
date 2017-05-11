@@ -24,6 +24,7 @@ class TransactionsController < ApplicationController
     params.require(:transaction)
           .permit(:date,
                   :delivery_address,
+                  :client_id,
                   :product, client_attributes: [:id, :name, :phone])
   end
 end
