@@ -35,6 +35,10 @@ gem 'cocoon'
 gem 'simple_form'
 gem 'slim-rails'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
