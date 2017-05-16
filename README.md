@@ -2,6 +2,15 @@
 
 View on heroku [Counter](https://fathomless-shore-32492.herokuapp.com)
 
+## Todo:
+- [x] Enable errors flashing
+- [ ] Add validation to the forms
+- [ ] Add authorization and authentication
+- [ ] Add sorting to the transaction table
+- [ ] Add phone formatter
+- [ ] Add Product entity
+- [ ] Add autocomplete in the clients selector. (Use [Selectize.js](http://selectize.github.io/selectize.js/))
+
 ## Entities
 ### Transactions
 * client
@@ -22,11 +31,3 @@ View on heroku [Counter](https://fathomless-shore-32492.herokuapp.com)
 * phone
 * transactions_id
 
-## Todo:
-- [x] Enable errors flashing
-- [ ] Add validation to the forms
-- [ ] Add authorization and authentication
-- [ ] Add sorting to the transaction table
-- [ ] Add phone formatter
-- [ ] Add Product entity
-- [ ] Add autocomplete in the clients selector. (Use [Selectize.js](http://selectize.github.io/selectize.js/))

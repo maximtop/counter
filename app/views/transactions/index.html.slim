@@ -19,7 +19,10 @@ table.table
         td= transaction.client.phone
         td= transaction.delivery_address
         td= transaction.product
-        td= link_to('Show', transaction_path(transaction))
+        td
+          =link_to('Show', transaction_path(transaction))
+          ||
+          =link_to('Destroy', transaction_path(transaction), method: :delete)
 
 .row.justify-content-center
   = link_to 'New Transaction', new_transaction_path, class: 'btn btn-primary', role: 'button'
