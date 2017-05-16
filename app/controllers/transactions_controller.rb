@@ -14,8 +14,11 @@ class TransactionsController < ApplicationController
   def create
     puts transaction_params
     @transaction = Transaction.new(transaction_params)
-    @transaction.save
-    redirect_to @transaction
+    if @transaction.save
+      redirect_to @transaction
+    else
+      render 'new'
+    end
   end
 
   private

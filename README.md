@@ -1,24 +1,32 @@
-# README
+# Pet project for sales accounting
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+View on heroku [Counter](https://fathomless-shore-32492.herokuapp.com)
 
-Things you may want to cover:
+## Entities
+### Transactions
+* client
+* product
+* quantity
+* price
+* total_cost
 
-* Ruby version
+### Products
+* title
+* description
+* cost_price
+* target_price
+* currency
 
-* System dependencies
+### Clients
+* name
+* phone
+* transactions_id
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Todo:
+- [x] Enable errors flashing
+- [ ] Add validation to the forms
+- [ ] Add authorization and authentication
+- [ ] Add sorting to the transaction table
+- [ ] Add phone formatter
+- [ ] Add Product entity
+- [ ] Add autocomplete in the clients selector. (Use [Selectize.js](http://selectize.github.io/selectize.js/))

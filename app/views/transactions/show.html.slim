@@ -1,17 +1,17 @@
 p
-  strong' Date:
+  strong> Date:
   = @transaction.date
 p
-  strong' Phone:
-  = @transaction.client.phone
-p
-  strong' Client:
+  strong> Client:
   = @transaction.client.name
 p
-  strong' Delivery address:
+  strong> Phone:
+  = @transaction.client.phone
+p
+  strong> Delivery address:
   = @transaction.delivery_address
 p
-  strong' Product:
+  strong> Product:
   = @transaction.product
 
 p= link_to('All transactions', transactions_path)
