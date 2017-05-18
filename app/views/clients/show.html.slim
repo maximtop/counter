@@ -5,5 +5,26 @@ p
   strong' Phone:
   = @client.phone
 
+h2 Clients transactions
+table.table
+  thead
+    tr
+      th Id
+      th Date
+      th Delivery Address
+      th Actions
+  tbody
+    - @client.transactions.each do |transaction|
+      tr
+        td= transaction.id
+        td= transaction.date
+        td= transaction.delivery_address
+        td
+          =link_to('Show', transaction_path(transaction))
+          ||
+          =link_to('Destroy', transaction_path(transaction),
+                  method: :delete,
+                  data: {confirm: 'Are you sure?'})
+
 
 p= link_to('All clients', clients_path)

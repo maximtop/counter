@@ -12,11 +12,12 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    puts transaction_params
     @transaction = Transaction.new(transaction_params)
     if @transaction.save
+      flash[:info] = 'Transaction successfully created!'
       redirect_to @transaction
     else
+      flash[:danger] = 'There were errors!'
       render 'new'
     end
   end

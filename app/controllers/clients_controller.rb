@@ -26,6 +26,7 @@ class ClientsController < ApplicationController
   def client_params
     params.require(:client)
           .permit(:name,
-                  :phone)
+                  :transactions_id,
+                  :phone, transaction_attributes: [:id, :date, :delivery_address])
   end
 end

@@ -20,4 +20,7 @@ html
             li.nav-item class= ('active' if current_page?clients_path)
               = link_to 'Clients', clients_path, class: 'nav-link'
     .container
+      - flash.each do |key, value|
+        div class=(flash_class(key))
+          = value
       = yield
